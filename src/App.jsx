@@ -261,9 +261,7 @@ function App() {
         <div className="hero-overlay"></div>
         <div className="hero-particles" id="heroParticles"></div>
         <div className="hero-content">
-          <div className="hero-logo animate-on-scroll">
-            <img src="/images/embassy-logo.jpg" alt="Embassy of Israel Logo" />
-          </div>
+          <div className="hero-badge animate-on-scroll">{t.hero.badge}</div>
           <h1 className="hero-title animate-on-scroll">
             <span className="title-line title-line-1">{t.hero.title1}</span>
             <span className="title-ampersand">&</span>
