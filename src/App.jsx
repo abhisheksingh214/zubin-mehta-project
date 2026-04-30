@@ -393,27 +393,42 @@ function App() {
         <div className="container">
           <div className="footer-content">
             <div className="footer-logo animate-on-scroll">
-              <img src="/images/embassy-logo.png" alt="Embassy of Israel Logo" />
+              <img src="/images/embassy-logo.jpg" alt="Embassy of Israel Logo" />
             </div>
-            <div className="footer-text animate-on-scroll" style={{ textAlign: 'center' }}>
-              <h3 className="section-subtitle" style={{ color: 'var(--color-text-primary)', fontStyle: 'normal', fontWeight: 600, marginBottom: '0.5rem' }}>{t.footer.thanks}</h3>
-              <p className="section-text" style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
-                {t.footer.partners}
-              </p>
-              <div className="partner-badges" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                {['MEA', 'NDMC', 'CPWD', 'DUAC'].map(badge => (
-                  <span key={badge} className="partner-badge">{badge}</span>
-                ))}
+            
+            <div className="footer-text animate-on-scroll">
+              <h3 className="footer-thanks-title">{t.footer.thanks}</h3>
+              <p className="footer-partners-text">{t.footer.partners}</p>
+              
+              <div className="partner-logos">
+                <div className="partner-logo-item">
+                  <img src="/images/ndmc-logo.png" alt="NDMC Logo" />
+                  <span>NDMC</span>
+                </div>
+                <div className="partner-logo-item">
+                  <img src="/images/cpwd-logo.png" alt="CPWD Logo" />
+                  <span>CPWD</span>
+                </div>
+                <div className="partner-logo-item">
+                  <img src="/images/duac-logo.png" alt="DUAC Logo" />
+                  <span>DUAC</span>
+                </div>
+                <div className="partner-logo-item">
+                  <div className="text-logo">MEA</div>
+                  <span>MEA</span>
+                </div>
               </div>
             </div>
-            <div className="footer-credits animate-on-scroll" style={{ textAlign: 'right' }}>
-              <p style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--color-gold-dim)', marginBottom: '0.5rem' }}>{t.footer.credits}</p>
-              <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>Zubin Portrait: <strong>Oded Antman</strong></p>
-              <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>Orchestra: <strong>Shai Skiff</strong></p>
+
+            <div className="footer-credits animate-on-scroll">
+              <p className="credits-label">{t.footer.credits}</p>
+              <p className="credits-item">Zubin Portrait: <strong>Oded Antman</strong></p>
+              <p className="credits-item">Orchestra: <strong>Shai Skiff</strong></p>
             </div>
           </div>
-          <div className="footer-bottom" style={{ marginTop: '2rem', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>{t.footer.commissioned}</p>
+          
+          <div className="footer-bottom">
+            <p className="commissioned-text">{t.footer.commissioned}</p>
           </div>
         </div>
       </footer>

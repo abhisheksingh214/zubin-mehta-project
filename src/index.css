@@ -656,17 +656,100 @@ a:hover {
     padding: 0.75rem 1rem;
 }
 
-.partner-badge {
-    display: inline-block;
-    font-size: 0.7rem;
+.footer-text {
+    text-align: center;
+}
+
+.footer-thanks-title {
+    color: var(--color-text-primary);
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.footer-partners-text {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.partner-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.partner-logo-item img {
+    height: 40px;
+    width: auto;
+    filter: grayscale(1) brightness(0.8) contrast(1.2);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-logo-item:hover img {
+    filter: grayscale(0) brightness(1);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.partner-logo-item span {
+    font-size: 0.6rem;
     font-weight: 600;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-gold);
+    color: var(--color-text-muted);
+}
+
+.text-logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--color-border);
-    padding: 0.4rem 1rem;
-    border-radius: 2rem;
-    background: rgba(201, 168, 76, 0.04);
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-gold-dim);
+}
+
+.footer-credits {
+    text-align: right;
+}
+
+.credits-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-gold-dim);
+    margin-bottom: 0.5rem;
+}
+
+.credits-item {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.commissioned-text {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
 }
 
 /* --- Animations --- */
