@@ -110,6 +110,7 @@ const translations = {
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [navVisible, setNavVisible] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lang, setLang] = useState('en');
   const heroRef = useRef(null);
 
@@ -211,27 +212,48 @@ function App() {
 
   return (
     <>
-      {/* Floating Nav */}
+      {/* Top Navigation */}
       <nav 
-        id="floating-nav" 
-        className="floating-nav" 
-        style={{ opacity: navVisible ? 1 : 0, pointerEvents: navVisible ? 'auto' : 'none' }}
+        className={`main-nav ${navVisible ? 'nav-scrolled' : ''} ${isMenuOpen ? 'menu-open' : ''}`}
       >
-        <div className="nav-links">
-          {['hero', 'about-mural', 'journey', 'bond', 'returning', 'discover'].map((id) => (
-            <a 
-              key={id}
-              onClick={() => scrollToSection(id)} 
-              className={`nav-link ${activeSection === id ? 'active' : ''}`}
-            >
-              {t.nav[id === 'about-mural' ? 'mural' : id]}
-            </a>
-          ))}
+        <div className="nav-container">
+          <div className="nav-brand" onClick={() => scrollToSection('hero')}>
+            <span className="brand-text">Mehta & IPO</span>
+          </div>
+
+          <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+            <div className="nav-links">
+              {['hero', 'about-mural', 'journey', 'bond', 'returning', 'discover'].map((id) => (
+                <a 
+                  key={id}
+                  onClick={() => {
+                    scrollToSection(id);
+                    setIsMenuOpen(false);
+                  }} 
+                  className={`nav-link ${activeSection === id ? 'active' : ''}`}
+                >
+                  {t.nav[id === 'about-mural' ? 'mural' : id]}
+                </a>
+              ))}
+            </div>
+            
+            <div className="nav-actions">
+              <button onClick={toggleLang} className="lang-toggle">
+                {lang === 'en' ? 'हिन्दी' : 'English'}
+              </button>
+            </div>
+          </div>
+
+          <button 
+            className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        <div className="nav-divider"></div>
-        <button onClick={toggleLang} className="lang-toggle">
-          {lang === 'en' ? 'हिन्दी' : 'English'}
-        </button>
       </nav>
 
       {/* Hero Section */}
