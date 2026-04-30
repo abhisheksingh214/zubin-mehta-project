@@ -416,7 +416,7 @@ function App() {
                   <span>DUAC</span>
                 </div>
                 <div className="partner-logo-item">
-                  <div className="text-logo">MEA</div>
+                  <img src="/images/mea-logo.png" alt="MEA Logo" />
                   <span>MEA</span>
                 </div>
               </div>
