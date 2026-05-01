@@ -298,19 +298,25 @@ a:hover {
 
 /* --- Typography (Hindi) --- */
 .font-hi {
-    font-family: 'Noto Serif Devanagari', 'Inter', sans-serif;
+    font-family: 'Hind', 'Inter', sans-serif;
 }
 
 .font-hi .section-title,
 .font-hi .hero-title,
-.font-hi .title-line-1 {
-    font-family: 'Noto Serif Devanagari', serif;
-    font-weight: 700;
+.font-hi .title-line-1,
+.font-hi .brand-text,
+.font-hi .timeline-year,
+.font-hi .mural-title {
+    font-family: 'Noto Serif Devanagari', 'Playfair Display', serif;
+    font-weight: 600;
 }
 
-.font-hi .section-text {
-    line-height: 2;
-    font-size: 1.05rem;
+.font-hi .section-text, 
+.font-hi .timeline-desc,
+.font-hi .audio-label {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
 /* --- Hero Section --- */
