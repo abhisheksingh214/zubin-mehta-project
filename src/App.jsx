@@ -20,7 +20,7 @@ const translations = {
     mural: {
       label: "About",
       title: "About the Mural",
-      text: "This mural, commissioned by the Embassy of Israel in New Delhi and painted by imagenation street art, honors decades of historical, cultural, and artistic connection between India and Israel. Centered on the remarkable journey of Zubin Mehta—one of India’s most celebrated musicians—and his deep bond with the Israel Philharmonic Orchestra, it reflects how music can bridge nations, histories, and identities."
+      text: "This mural, commissioned by the Embassy of Israel in New Delhi and painted by imagenation street art, honors decades of historical, cultural, and artistic connection between India and Israel. Centered on the remarkable journey of Zubin Mehta, one of India’s most celebrated musicians, and his deep bond with the Israel Philharmonic Orchestra, it reflects how music can bridge nations, histories, and identities."
     },
     journey: {
       label: "Biography",
@@ -32,7 +32,7 @@ const translations = {
     bond: {
       label: "Legacy",
       title: "A Lifelong Bond with Israel",
-      p1: "Zubin Mehta’s relationship with the Israel Philharmonic Orchestra began in 1969. He later became its Music Director for Life—an extraordinary title reflecting decades of artistic leadership and deep personal commitment.",
+      p1: "Zubin Mehta’s relationship with the Israel Philharmonic Orchestra began in 1969. He later became its Music Director for Life, an extraordinary title reflecting decades of artistic leadership and deep personal commitment.",
       p2: "Through his work, Mehta helped shape the orchestra into one of the world’s finest, based in Tel Aviv, while also serving as a cultural ambassador for Israel across the globe."
     },
     returning: {
@@ -72,7 +72,7 @@ const translations = {
     mural: {
       label: "के बारे में",
       title: "भित्ति चित्र के बारे में",
-      text: "यह भित्ति चित्र, जिसे नई दिल्ली में इज़राइल दूतावास द्वारा आयोगित किया गया और imagenation street art द्वारा बनाया गया, भारत और इज़राइल के बीच दशकों से चले आ रहे ऐतिहासिक, सांस्कृतिक और कलात्मक संबंधों का सम्मान करता है। ज़ुबिन मेहता की असाधारण यात्रा—जो भारत के सबसे प्रसिद्ध संगीतकारों में से एक हैं—और इज़राइल फ़िलहारमोनिक ऑर्केस्ट्रा के साथ उनके गहरे संबंध को केंद्र में रखते हुए, यह दर्शाता है कि संगीत कैसे देशों, इतिहासों और पहचानों को जोड़ सकता है।"
+      text: "यह भित्ति चित्र, जिसे नई दिल्ली में इज़राइल दूतावास द्वारा आयोगित किया गया और imagenation street art द्वारा बनाया गया, भारत और इज़राइल के बीच दशकों से चले आ रहे ऐतिहासिक, सांस्कृतिक और कलात्मक संबंधों का सम्मान करता है। ज़ुबिन मेहता की असाधारण यात्रा, जो भारत के सबसे प्रसिद्ध संगीतकारों में से एक हैं, और इज़राइल फ़िलहारमोनिक ऑर्केस्ट्रा के साथ उनके गहरे संबंध को केंद्र में रखते हुए, यह दर्शाता है कि संगीत कैसे देशों, इतिहासों और पहचानों को जोड़ सकता है।"
     },
     journey: {
       label: "जीवनी",
@@ -84,7 +84,7 @@ const translations = {
     bond: {
       label: "विरासत",
       title: "इज़राइल के साथ आजीवन संबंध",
-      p1: "ज़ुबिन मेहता का इज़राइल फ़िलहारमोनिक ऑर्केस्ट्रा के साथ संबंध 1969 में शुरू हुआ। बाद में उन्हें “म्यूज़िक डायरेक्टर फ़ॉर लाइफ़” की उपाधि दी गई—जो उनके दशकों लंबे कलात्मक नेतृत्व और गहरी व्यक्तिगत प्रतिबद्धता को दर्शाती है।",
+      p1: "ज़ुबिन मेहता का इज़राइल फ़िलहारमोनिक ऑर्केस्ट्रा के साथ संबंध 1969 में शुरू हुआ। बाद में उन्हें “म्यूज़िक डायरेक्टर फ़ॉर लाइफ़” की उपाधि दी गई, जो उनके दशकों लंबे कलात्मक नेतृत्व और गहरी व्यक्तिगत प्रतिबद्धता को दर्शाती है।",
       p2: "अपने कार्य के माध्यम से, मेहता ने इस ऑर्केस्ट्रा को दुनिया के श्रेष्ठतम ऑर्केस्ट्राओं में से एक बनाने में मदद की, जिसका मुख्यालय तेल अवीव में है, और साथ ही वे वैश्विक स्तर पर इज़राइल के सांस्कृतिक दूत के रूप में भी कार्य करते रहे।"
     },
     returning: {
@@ -218,7 +218,7 @@ function App() {
       >
         <div className="nav-container">
           <div className="nav-brand" onClick={() => scrollToSection('hero')}>
-            <span className="brand-text">Mehta & IPO</span>
+            <span className="brand-text">Mehta & Israel Philharmonic Orchestra</span>
           </div>
 
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
@@ -284,6 +284,10 @@ function App() {
           <p className="section-text section-text-large animate-on-scroll">
             {t.mural.text}
           </p>
+          <div className="mural-gallery animate-on-scroll">
+            <img src="/images/mural/20260501_161034.jpg.jpeg" alt="Mural detail 1" loading="lazy" />
+            <img src="/images/mural/20260501_161247.jpg.jpeg" alt="Mural detail 2" loading="lazy" />
+          </div>
         </div>
       </section>
 
@@ -351,7 +355,7 @@ function App() {
             <div className="timeline-connector"></div>
             <div className="timeline-item">
               <div className="timeline-year">1969</div>
-              <div className="timeline-desc">{lang === 'en' ? 'Begins with IPO' : 'IPO के साथ शुरुआत'}</div>
+              <div className="timeline-desc">{lang === 'en' ? 'Begins with Israel Philharmonic Orchestra' : 'इज़राइल फ़िलहारमोनिक ऑर्केस्ट्रा के साथ शुरुआत'}</div>
             </div>
             <div className="timeline-connector"></div>
             <div className="timeline-item">
@@ -377,6 +381,12 @@ function App() {
             <p className="section-text" style={{ margin: '0 auto 1.5rem', textAlign: 'center' }}>
               {t.discover.text}
             </p>
+            <div className="audio-player-container animate-on-scroll">
+              <p className="audio-label">{lang === 'en' ? 'Listen: IV. Finale Allegro molto' : 'सुनें: IV. Finale Allegro molto'}</p>
+              <audio controls src="/audio/finale-allegro-molto.mp3">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
             <a href="https://www.ipo.co.il/en/" target="_blank" rel="noopener noreferrer" className="cta-button">
               <span>{t.discover.cta}</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
