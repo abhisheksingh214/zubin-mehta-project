@@ -250,8 +250,6 @@ function App() {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/finale-allegro-molto.mp3" loop preload="auto" />
-      
       {/* Floating Audio Toggle */}
       <button 
         className={`floating-audio-toggle ${isAudioPlaying ? 'playing' : ''}`}
@@ -442,6 +440,23 @@ function App() {
             <p className="section-text" style={{ margin: '0 auto 1.5rem', textAlign: 'center' }}>
               {t.discover.text}
             </p>
+            <div className="audio-player-container animate-on-scroll">
+              <p className="audio-label">
+                <span className="audio-icon">🎵</span> 
+                {lang === 'en' ? 'Listen: IV. Finale Allegro molto' : 'सुनें: IV. Finale Allegro molto'}
+              </p>
+              <audio 
+                ref={audioRef} 
+                src="/audio/finale-allegro-molto.mp3" 
+                loop 
+                controls 
+                preload="auto"
+                onPlay={() => setIsAudioPlaying(true)}
+                onPause={() => setIsAudioPlaying(false)}
+              >
+                Your browser does not support the audio element.
+              </audio>
+            </div>
             <a href="https://www.ipo.co.il/en/" target="_blank" rel="noopener noreferrer" className="cta-button">
               <span>{t.discover.cta}</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
