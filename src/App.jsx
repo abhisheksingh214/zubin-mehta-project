@@ -279,7 +279,7 @@ function App() {
       >
         <div className="nav-container">
           <div className="nav-brand" onClick={() => scrollToSection('hero')}>
-            <span className="brand-text">IPO</span>
+            <span className="brand-text">Mehta & IPO</span>
           </div>
 
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
