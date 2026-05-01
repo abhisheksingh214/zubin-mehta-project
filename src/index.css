@@ -102,9 +102,9 @@ a:hover {
 
 .brand-text {
     font-family: var(--font-display);
-    font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     color: var(--color-gold);
 }
 
@@ -203,12 +203,7 @@ a:hover {
 
 @media (max-width: 968px) {
     .brand-text {
-        font-size: 0.8rem;
-        max-width: 65vw;
-        display: inline-block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 1.2rem;
     }
 
     .menu-toggle {
@@ -560,18 +555,20 @@ a:hover {
 
 .timeline {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 0;
-    margin-top: 3rem;
-    padding: 2rem 0;
-    flex-wrap: wrap;
+    margin-top: 4rem;
+    padding: 1rem 0;
+    flex-wrap: nowrap;
 }
 
 .timeline-item {
     text-align: center;
-    padding: 1rem 1.5rem;
+    padding: 0 1rem;
     position: relative;
+    flex: 1;
+    min-width: 0;
 }
 
 .timeline-year {
@@ -580,7 +577,7 @@ a:hover {
     font-weight: 600;
     color: var(--color-gold);
     line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .timeline-desc {
@@ -590,10 +587,12 @@ a:hover {
 }
 
 .timeline-connector {
-    width: 60px;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--color-gold-dim), transparent);
-    flex-shrink: 0;
+    flex-grow: 1;
+    max-width: 80px;
+    margin-top: 0.9rem;
+    flex-shrink: 1;
 }
 
 .discover-card {
@@ -651,8 +650,10 @@ a:hover {
 
 .mural-gallery img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4),
                 0 0 0 1px rgba(201, 168, 76, 0.1);
     transition: transform 0.4s var(--transition-smooth);
@@ -868,6 +869,17 @@ a:hover {
         top: auto; bottom: 1rem; right: 50%; transform: translateX(50%);
         flex-direction: row; padding: 0.5rem 0.75rem;
     }
-    .timeline { flex-direction: column; }
-    .timeline-connector { width: 1px; height: 40px; }
+    .timeline { flex-direction: column; align-items: center; gap: 1rem; }
+    .timeline-connector { width: 1px; height: 40px; margin: 1rem 0; max-width: 1px; }
+    .timeline-item { padding: 1rem 0; }
+    .floating-audio-toggle {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 44px;
+        height: 44px;
+    }
+    .floating-audio-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
 }
