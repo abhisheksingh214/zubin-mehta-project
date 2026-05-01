@@ -232,7 +232,7 @@ function App() {
     }
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lang]);
+  }, [lang, theme]);
 
   const scrollToSection = (id) => {
     const target = document.getElementById(id);
